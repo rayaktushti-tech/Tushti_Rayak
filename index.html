@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tushti Rayak — Portfolio | 1st Year @ NST Hyderabad</title>
-  <meta name="description" content="Personal portfolio of Tushti Rayak: 18-year-old developer, 2x Hackathon Team Leader, SIH Participant, and 1st year student at Newton School of Technology Hyderabad.">
+  <title>Tushti Rayak — Developer & Hackathon Leader</title>
+  <meta name="description"
+    content="Tushti Rayak is an 18-year-old software developer and 1st-year student at Newton School of Technology Hyderabad, building zero-knowledge campus systems, 3D web tools, and AI agents.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
 </head>
-<body data-theme="dark">
 
-  <!-- Sticky Minimal Navigation -->
-  <header class="site-header" id="header">
-    <div class="nav-container">
-      <a href="#hero" class="brand-logo">
-        <span class="logo-badge">TR</span>
-        <span class="logo-text">Tushti Rayak</span>
+<body>
+
+  <!-- Screen Halftone Overlay (Signature Amber UI texture) -->
+  <div aria-hidden="true" class="halftone pointer-events-none fixed inset-0 z-40"></div>
+
+  <!-- Top Header Navigation -->
+  <header class="site-header">
+    <div class="container-wide header-inner">
+      <a class="brand-link font-display" href="#hero">
+        Tushti<span class="text-accent">.</span>
       </a>
 
-      <nav class="nav-links" id="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#featured" class="nav-link">Featured Work</a>
-        <a href="#hackathons" class="nav-link">Hackathons</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <nav class="nav-links">
+        <a class="nav-item hover-highlight" href="#projects">Work</a>
+        <a class="nav-item hover-highlight" href="#hackathons">Hackathons</a>
+        <a class="nav-item hover-highlight" href="#about">About</a>
+        <a class="nav-item hover-highlight" href="#contact">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="icon-button" aria-label="Toggle dark/light theme" title="Toggle theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <a href="https://github.com/rayaktushti-tech" target="_blank" rel="noopener noreferrer" class="btn-github-pill"
+          title="GitHub Profile">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+          <span class="github-id">rayaktushti-tech</span>
+        </a>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color theme">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -43,896 +57,754 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <a href="#contact" class="btn btn-sm btn-primary">Connect</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
+  <main class="site-main">
+
+    <!-- Hero Section (Modeled exactly like Amber's Viewfinder Centerpiece with Noticeable Bio Paragraph) -->
     <section class="hero-section" id="hero">
-      <div class="hero-glow"></div>
-      <div class="container hero-layout">
-        <div class="hero-content">
-          <div class="status-pill">
-            <span class="pulse-dot"></span>
-            <span>18 Years Old &bull; 1st Year @ NST Hyderabad</span>
-          </div>
-          
-          <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Tushti Rayak</span>.<br>
-            Building high-impact websites & intelligent AI agents.
-          </h1>
-
-          <p class="hero-lead">
-            First-year innovator at <strong>Newton School of Technology</strong>. Proven track record leading teams in <strong>3 hackathons</strong>, architecting 2D-to-3D spatial web platforms, creating healthcare solutions for dementia care, and building live AI forecast agents.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#featured" class="btn btn-primary">
-              <span>Explore Featured Work</span>
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      <div class="hero-centerpiece">
+        <!-- Viewfinder Box with Amber Corner Brackets -->
+        <div class="viewfinder-box">
+          <!-- 4 Corner Brackets -->
+          <div aria-hidden="true" class="corner-brackets-container">
+            <span class="corner-bracket top-left"></span>
+            <span class="corner-bracket top-right"></span>
+            <span class="corner-bracket bottom-left"></span>
+            <span class="corner-bracket bottom-right"></span>
           </div>
 
-          <!-- Highlight Metric Badges -->
-          <div class="hero-stats-grid">
-            <div class="stat-card">
-              <span class="stat-value">3</span>
-              <span class="stat-label">Hackathons Completed</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value">2x</span>
-              <span class="stat-label">Hackathon Team Lead</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value">100%</span>
-              <span class="stat-label">Live Working AI Agent</span>
-            </div>
-          </div>
-        </div>
+          <p class="text-label hero-category-label">Full-Stack Developer &bull; 1st Year @ NST Hyderabad</p>
+          <h1 class="misregistered font-display hero-big-title">Tushti Rayak</h1>
+          <p class="hero-tagline font-display">Zero-Knowledge Systems &bull; 3D Web &bull; AI Agents</p>
 
-        <!-- Hero Glass Profile Card -->
-        <div class="hero-visual">
-          <div class="card-glass profile-showcase">
-            <div class="avatar-ring">
-              <div class="avatar-fallback">TR</div>
-            </div>
-            <h3 class="profile-name">Tushti Rayak</h3>
-            <p class="profile-role">Web Developer & AI Enthusiast</p>
-            <div class="profile-tags">
-              <span class="tag">2x Team Lead</span>
-              <span class="tag">SIH Participant</span>
-              <span class="tag">AI Agents</span>
-              <span class="tag">3D Web</span>
-            </div>
-
-            <div class="profile-quick-facts">
-              <div class="fact-row">
-                <span class="fact-icon">🎓</span>
-                <div class="fact-text">
-                  <span class="fact-title">Newton School of Technology</span>
-                  <span class="fact-sub">1st Year Student &bull; Hyderabad</span>
-                </div>
-              </div>
-              <div class="fact-row">
-                <span class="fact-icon">🏫</span>
-                <div class="fact-text">
-                  <span class="fact-title">SSRVM Indore</span>
-                  <span class="fact-sub">Schooling &bull; Madhya Pradesh</span>
-                </div>
-              </div>
-              <div class="fact-row">
-                <span class="fact-icon">⚡</span>
-                <div class="fact-text">
-                  <span class="fact-title">High-Velocity Prototyping</span>
-                  <span class="fact-sub">Built 2 websites in an overnight 24h sprint</span>
-                </div>
-              </div>
-            </div>
+          <!-- Big, Noticeable Paragraph About Tushti on First Page -->
+          <div class="hero-bio-featured-wrap">
+            <p class="hero-bio-featured">
+              Hi! I'm <strong>Tushti Rayak</strong> &mdash; an 18-year-old software developer and 1st-year student at
+              <strong>Newton School of Technology, Hyderabad</strong> (schooling from SSRVM Indore). <strong>2x
+                hackathon team leader</strong> architecting privacy-first campus OS platforms, 3D spatial floorplan
+              converters, dementia therapy games, and autonomous weather AI forecasting agents.
+            </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Personal Profile / About Section -->
-    <section class="section about-section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Personal Background</span>
-          <h2 class="section-title">About Me & Personal Data</h2>
-          <p class="section-desc">Get to know who I am, my academic roots, and my passion for shipping software.</p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-card main-bio">
-            <div class="card-icon">🚀</div>
-            <h3>Who I Am</h3>
-            <p>
-              I am <strong>Tushti Rayak</strong>, an 18-year-old developer and computer science student currently studying in my 1st year at <strong>Newton School of Technology (NST), Hyderabad</strong>. Originally from <strong>Indore, Madhya Pradesh</strong>, I finished my school education at <strong>Sri Sri Ravishankar Vidhya Mandir (SSRVM)</strong> before embarking on my undergraduate journey.
-            </p>
-            <p>
-              From day one of entering college, I committed to putting theory into practice by competing in hackathons and building practical applications. In just my first year, I have already participated in <strong>3 hackathons</strong>, served as <strong>Team Leader in two of them</strong> (including the Smart India Hackathon and a 24-hour overnight hackathon), and engineered an autonomous AI forecasting agent that provides precise meteorological guidance.
-            </p>
-          </div>
-
-          <div class="about-card info-card">
-            <div class="card-icon">📋</div>
-            <h3>Quick Personal Profile</h3>
-            <ul class="personal-data-list">
-              <li>
-                <span class="info-label">Name:</span>
-                <span class="info-value">Tushti Rayak</span>
-              </li>
-              <li>
-                <span class="info-label">Age:</span>
-                <span class="info-value">18 Years Old</span>
-              </li>
-              <li>
-                <span class="info-label">Current College:</span>
-                <span class="info-value">Newton School of Technology, Hyderabad (1st Year)</span>
-              </li>
-              <li>
-                <span class="info-label">Schooling:</span>
-                <span class="info-value">Sri Sri Ravishankar Vidhya Mandir (SSRVM), Indore (M.P.)</span>
-              </li>
-              <li>
-                <span class="info-label">Key Strengths:</span>
-                <span class="info-value">Team Leadership, Web Development, AI Agents</span>
-              </li>
-              <li>
-                <span class="info-label">Status:</span>
-                <span class="info-value">Active & Building &bull; Open for Collabs</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <!-- Bottom-Right Availability Badge -->
+      <div class="hero-corner-right">
+        <p class="text-label availability-tag">
+          <span class="pulse-indicator"></span>
+          Available for hackathons & engineering
+        </p>
       </div>
     </section>
 
-    <!-- Education Journey -->
-    <section class="section education-section" id="education">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Academic Timeline</span>
-          <h2 class="section-title">Education Journey</h2>
-          <p class="section-desc">Institutions that have shaped my analytical foundation and engineering mindset.</p>
+    <!-- Work / Projects Section (Amber's Selected Campaigns List Style) -->
+    <section class="section-work border-t border-separator" id="projects">
+      <div class="container-wide section-title-container">
+        <p class="text-label">Selected Engineering</p>
+        <h2 class="font-display section-massive-title">Work</h2>
+      </div>
+
+      <div class="projects-list border-t border-separator">
+
+        <!-- PROJECT 1: Synqron Track 1 - Privacy-First Smart Campus OS & Zero-Knowledge Wellness Sanctuary -->
+        <div class="project-row border-b border-separator">
+          <div class="container-wide project-row-inner">
+            <div class="project-row-header">
+              <div class="project-header-left">
+                <span class="project-num">01</span>
+                <div>
+                  <h3 class="font-display project-title">Privacy-First Campus OS & Zero-Knowledge Sanctuary</h3>
+                  <p class="project-subtitle">Hacktoberfest Synqron &bull; Track 1</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="pill-badge">Google Gemma 4 AI</span>
+                <span class="pill-badge">Web Crypto AES-256</span>
+                <span class="pill-badge accent-badge">Team Leader</span>
+                <span class="year-label">2024</span>
+              </div>
+            </div>
+
+            <!-- Detail expansion card -->
+            <div class="project-details-box">
+              <div class="details-grid">
+                <div class="details-main">
+                  <p class="details-desc">
+                    A privacy-first residential campus operating system paired with a zero-knowledge student mental
+                    wellness sanctuary. Engineered to resolve tension between university administrative compliance and
+                    student civil liberties. Powered by open-source Google Gemma 4 AI to automate campus logistics
+                    (digital gate out-passes, dining capacity forecasts, and rapid maintenance triage).
+                  </p>
+                  <p class="details-desc">
+                    Includes hardware-encrypted on-device mental wellness check-ins powered by the <strong>Web Crypto
+                      API (AES-256-GCM)</strong>, ensuring student journals remain cryptographically shielded from
+                    hostel staff and administrative surveillance.
+                  </p>
+                </div>
+
+                <div class="details-actions">
+                  <div class="viewfinder-mini">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <span class="text-label mini-label">Verified Track 1 Repo</span>
+                    <a href="https://github.com/rayaktushti-tech/Hacktoberfest_Synqron_Track_1" target="_blank"
+                      rel="noopener noreferrer" class="btn-primary-action">
+                      <span>GitHub Repository</span>
+                      <span class="btn-arrow">&nearr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="timeline">
-          <!-- College -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">2024 – Present &bull; 1st Year</div>
-              <h3 class="timeline-institution">Newton School of Technology</h3>
-              <div class="timeline-location">📍 Hyderabad, Telangana</div>
-              <p class="timeline-text">
-                Currently in my first year, actively learning modern computer science paradigms, full-stack web engineering, and artificial intelligence. Representing the college in nationwide hackathons and leading technical teams.
+        <!-- PROJECT 2: Synqron Track 2 - 2D Map Blueprint to Interactive 3D Model Converter -->
+        <div class="project-row border-b border-separator">
+          <div class="container-wide project-row-inner">
+            <div class="project-row-header">
+              <div class="project-header-left">
+                <span class="project-num">02</span>
+                <div>
+                  <h3 class="font-display project-title">2D Map & Blueprint to 3D House Converter</h3>
+                  <p class="project-subtitle">Hacktoberfest Synqron &bull; Track 2</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="pill-badge">3D Web / WebGL</span>
+                <span class="pill-badge">Spatial Canvas</span>
+                <span class="pill-badge accent-badge">24h Hackathon Lead</span>
+                <span class="year-label">2024</span>
+              </div>
+            </div>
+
+            <!-- Detail expansion card -->
+            <div class="project-details-box">
+              <div class="details-grid">
+                <div class="details-main">
+                  <p class="details-desc">
+                    Developed during a 24-hour overnight hackathon where our team successfully built and delivered
+                    <strong>2 complete websites</strong>. This application ingests flat 2D architectural blueprints and
+                    maps, extrapolating wall boundaries and spatial geometries to construct real-time, interactive 3D
+                    house models.
+                  </p>
+                  <p class="details-desc">
+                    Features orbit-camera navigation, interior room walkthroughs, lighting condition toggles, texture
+                    swapping, and room partition layer filtering.
+                  </p>
+                </div>
+
+                <div class="details-actions">
+                  <div class="viewfinder-mini">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <span class="text-label mini-label">Verified Track 2 Repo</span>
+                    <a href="https://github.com/rayaktushti-tech/Hacktoberfest_Synqron_Track_2" target="_blank"
+                      rel="noopener noreferrer" class="btn-primary-action">
+                      <span>GitHub Repository</span>
+                      <span class="btn-arrow">&nearr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Dementia Gaming & Care Platform (Game-Able) -->
+        <div class="project-row border-b border-separator">
+          <div class="container-wide project-row-inner">
+            <div class="project-row-header">
+              <div class="project-header-left">
+                <span class="project-num">03</span>
+                <div>
+                  <h3 class="font-display project-title">Game-Able: Dementia Care & Cognitive Suite</h3>
+                  <p class="project-subtitle">Smart India Hackathon (SIH)</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="pill-badge">Healthcare UX</span>
+                <span class="pill-badge">Assistive Gaming</span>
+                <span class="pill-badge accent-badge">SIH Team Leader</span>
+                <span class="year-label">2024</span>
+              </div>
+            </div>
+
+            <!-- Detail expansion card -->
+            <div class="project-details-box">
+              <div class="details-grid">
+                <div class="details-main">
+                  <p class="details-desc">
+                    Served as <strong>Team Leader</strong> at the Smart India Hackathon to design and build an
+                    empathetic web application for dementia patients and their caregivers. Incorporates
+                    neuro-stimulating cognitive memory games to gently exercise neural pathways without anxiety, paired
+                    with a comprehensive caregiver dashboard.
+                  </p>
+                  <p class="details-desc">
+                    Includes medication logs, routine tracking, high-contrast readable accessibility typography, calming
+                    sensory palettes, and distress notifications.
+                  </p>
+                </div>
+
+                <div class="details-actions">
+                  <div class="viewfinder-mini">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <span class="text-label mini-label">Live Production Demo</span>
+                    <a href="https://game-able.lovable.app/" target="_blank" rel="noopener noreferrer"
+                      class="btn-primary-action live-btn">
+                      <span>Launch Live Demo</span>
+                      <span class="btn-arrow">&nearr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Autonomous Weather Forecast AI Agent -->
+        <div class="project-row border-b border-separator">
+          <div class="container-wide project-row-inner">
+            <div class="project-row-header">
+              <div class="project-header-left">
+                <span class="project-num">04</span>
+                <div>
+                  <h3 class="font-display project-title">Autonomous Weather Forecast AI Agent</h3>
+                  <p class="project-subtitle">Independent Engineering</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="pill-badge">Autonomous Agent</span>
+                <span class="pill-badge">Real-Time APIs</span>
+                <span class="pill-badge status-live">Live &amp; Verified</span>
+                <span class="year-label">2024</span>
+              </div>
+            </div>
+
+            <!-- Detail expansion card with Interactive Terminal -->
+            <div class="project-details-box">
+              <p class="details-desc">
+                An intelligent AI agent engineered to parse multi-parameter atmospheric telemetry (ambient temperature,
+                humidity, wind vectors, UV index, and precipitation probabilities) to provide conversational,
+                context-aware forecasts with verified zero hallucination.
               </p>
-              <div class="timeline-badge-group">
-                <span class="mini-badge">First Year</span>
-                <span class="mini-badge">Hackathon Team Leader</span>
-                <span class="mini-badge">Full-Stack & AI</span>
+
+              <!-- Interactive Simulator Box -->
+              <div class="viewfinder-simulator">
+                <div aria-hidden="true" class="corner-brackets-container">
+                  <span class="corner-bracket top-left"></span>
+                  <span class="corner-bracket top-right"></span>
+                  <span class="corner-bracket bottom-left"></span>
+                  <span class="corner-bracket bottom-right"></span>
+                </div>
+
+                <div class="sim-header">
+                  <span class="sim-dot"></span>
+                  <span class="text-label">Interactive AI Agent Pipeline</span>
+                  <span class="sim-meta">Telemetry Online</span>
+                </div>
+
+                <div class="sim-presets">
+                  <span class="text-label">Presets:</span>
+                  <button class="preset-pill" data-city="Hyderabad">Hyderabad (NST Campus)</button>
+                  <button class="preset-pill" data-city="Indore">Indore (Hometown)</button>
+                  <button class="preset-pill" data-city="Bengaluru">Bengaluru</button>
+                  <button class="preset-pill" data-city="Delhi">New Delhi</button>
+                </div>
+
+                <div class="sim-input-row">
+                  <input type="text" id="sim-city-input" placeholder="Enter city name (e.g. Mumbai, Tokyo, London)..."
+                    class="sim-input">
+                  <button id="sim-submit-btn" class="sim-btn">Query Agent &rarr;</button>
+                </div>
+
+                <div class="sim-terminal-screen" id="sim-terminal-screen">
+                  <div class="terminal-line"><span class="t-prompt">&gt;</span> AI Agent initialized. Click a preset or
+                    enter a city to inspect telemetry output.</div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Schooling -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">Schooling Completed</div>
-              <h3 class="timeline-institution">Sri Sri Ravishankar Vidhya Mandir (SSRVM)</h3>
-              <div class="timeline-location">📍 Indore, Madhya Pradesh</div>
-              <p class="timeline-text">
-                Completed secondary and senior secondary schooling with strong foundations in mathematics, sciences, leadership, and ethical values.
+      </div>
+    </section>
+
+    <!-- Hackathon Track Record (Amber's Minimalist Editorial Table) -->
+    <section class="section-hackathons border-b border-separator" id="hackathons">
+      <div class="container-wide section-title-container">
+        <p class="text-label">Competitive Track Record</p>
+        <h2 class="font-display section-massive-title">Hackathons</h2>
+      </div>
+
+      <div class="hackathon-table border-t border-separator">
+        <!-- Entry 1 -->
+        <div class="hackathon-row border-b border-separator">
+          <div class="container-wide hackathon-row-inner">
+            <span class="font-display hack-index">01</span>
+            <div class="hack-content">
+              <h4 class="font-display hack-title">Smart India Hackathon (SIH)</h4>
+              <p class="hack-desc">
+                Served as <strong>Team Leader</strong>. Guided our multidisciplinary team to build <em>Game-Able</em>, a
+                dual-purpose gaming and caregiving platform for dementia patients.
               </p>
-              <div class="timeline-badge-group">
-                <span class="mini-badge">Indore, M.P.</span>
-                <span class="mini-badge">SSRVM Alum</span>
-                <span class="mini-badge">Foundations</span>
+              <div class="hack-links">
+                <a href="https://game-able.lovable.app/" target="_blank" rel="noopener noreferrer"
+                  class="hover-highlight inline-arrow-link">
+                  <span>View Live Demo: game-able.lovable.app</span>
+                  <span class="btn-arrow">&nearr;</span>
+                </a>
               </div>
+            </div>
+            <div class="hack-meta">
+              <span class="pill-badge accent-badge">Team Leader</span>
+              <span class="text-label">SIH Finalist</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="hackathon-row border-b border-separator">
+          <div class="container-wide hackathon-row-inner">
+            <span class="font-display hack-index">02</span>
+            <div class="hack-content">
+              <h4 class="font-display hack-title">Hacktoberfest Synqron (24h Overnight Hackathon)</h4>
+              <p class="hack-desc">
+                Served as <strong>Team Leader</strong>. Guided the team through a non-stop 24-hour sprint,
+                simultaneously shipping <strong>two complete web platforms</strong>: Track 1 (Gemma 4 AI campus OS &
+                zero-knowledge wellness sanctuary) and Track 2 (2D-to-3D interactive house model visualizer).
+              </p>
+              <div class="hack-links">
+                <a href="https://github.com/rayaktushti-tech/Hacktoberfest_Synqron_Track_1" target="_blank"
+                  rel="noopener noreferrer" class="hover-highlight inline-arrow-link">
+                  <span>Track 1 Repo</span>
+                  <span class="btn-arrow">&nearr;</span>
+                </a>
+                <span class="text-separator">&bull;</span>
+                <a href="https://github.com/rayaktushti-tech/Hacktoberfest_Synqron_Track_2" target="_blank"
+                  rel="noopener noreferrer" class="hover-highlight inline-arrow-link">
+                  <span>Track 2 Repo</span>
+                  <span class="btn-arrow">&nearr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="hack-meta">
+              <span class="pill-badge accent-badge">Team Leader</span>
+              <span class="text-label">2 Websites Shipped</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 3 -->
+        <div class="hackathon-row border-b border-separator">
+          <div class="container-wide hackathon-row-inner">
+            <span class="font-display hack-index">03</span>
+            <div class="hack-content">
+              <h4 class="font-display hack-title">Collegiate 1st-Year Hackathon Sprint</h4>
+              <p class="hack-desc">
+                Collaborated with engineering peers at Newton School of Technology to design and deploy full-stack web
+                applications under rigorous time constraints.
+              </p>
+            </div>
+            <div class="hack-meta">
+              <span class="pill-badge">Core Developer</span>
+              <span class="text-label">Rapid Prototyping</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects (Highlighted with Live Interactive Demos) -->
-    <section class="section featured-section" id="featured">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Featured Highlights</span>
-          <h2 class="section-title">What I've Built So Far</h2>
-          <p class="section-desc">Detailed highlights of my flagship projects with interactive preview simulations.</p>
-        </div>
+    <!-- Education & Personal Data Section with Interactive Slide -->
+    <section class="section-about border-b border-separator" id="about">
+      <div class="container-wide section-title-container">
+        <p class="text-label">Credentials &bull; Background</p>
+        <h2 class="font-display section-massive-title">Education &amp; Personal Data</h2>
+      </div>
 
-        <div class="featured-grid">
-          
-          <!-- FEATURE 1: Dementia Gaming & Care App (SIH) -->
-          <article class="project-card highlight-card">
-            <div class="card-badge-row">
-              <span class="project-pill sih-pill">Smart India Hackathon (SIH)</span>
-              <span class="project-pill role-pill">👑 Team Leader</span>
+      <div class="container-wide">
+        <!-- Education and Personal Data Slide Component in Amber UI Style -->
+        <div class="viewfinder-slide-box">
+          <div aria-hidden="true" class="corner-brackets-container">
+            <span class="corner-bracket top-left"></span>
+            <span class="corner-bracket top-right"></span>
+            <span class="corner-bracket bottom-left"></span>
+            <span class="corner-bracket bottom-right"></span>
+          </div>
+
+          <!-- Slide Header Controls -->
+          <div class="slide-nav-header border-b border-separator">
+            <div class="slide-tab-toggles">
+              <button class="slide-tab-btn active font-display" id="tab-edu" data-slide="0">
+                <span>01. Education Journey</span>
+              </button>
+              <button class="slide-tab-btn font-display" id="tab-data" data-slide="1">
+                <span>02. Personal Data</span>
+              </button>
             </div>
 
-            <div class="project-header">
-              <div class="project-icon-box">🧠</div>
-              <div>
-                <h3 class="project-name">Gaming & Care Platform for Dementia Patients</h3>
-                <p class="project-tagline">Cognitive Stimulation, Memory Games & Caregiver Monitoring</p>
-              </div>
+            <div class="slide-stepper-controls">
+              <button id="slide-arrow-prev" class="stepper-arrow-btn" aria-label="Previous Slide">&larr;</button>
+              <span class="text-label"><span id="slide-index-num" class="font-display text-accent text-sm">01</span> /
+                02</span>
+              <button id="slide-arrow-next" class="stepper-arrow-btn" aria-label="Next Slide">&rarr;</button>
             </div>
+          </div>
 
-            <p class="project-description">
-              As <strong>Team Leader</strong> at the Smart India Hackathon (SIH), I led the creation of an empathetic web application designed to support dementia patients. The system combines neuro-stimulating memory games to exercise cognition alongside a caregiver support suite with routines, medication alerts, and panic prompts.
-            </p>
+          <!-- Slides Wrapper -->
+          <div class="slide-panes-wrapper">
+            <!-- SLIDE 1: Education Journey -->
+            <div class="slide-pane-item active-pane" id="pane-edu">
+              <p class="text-label mb-2">Academic Timeline</p>
+              <h3 class="font-display slide-title mb-6">Education &amp; Academic Milestones</h3>
 
-            <div class="project-key-features">
-              <h4>Key Highlights & Features:</h4>
-              <ul class="feature-checklist">
-                <li><strong>Cognitive Stimulation Games:</strong> Gentle memory matching, sensory pattern recall, and reaction exercises.</li>
-                <li><strong>Caregiver Portal:</strong> Real-time medicine logs, routine checklists, and easy distress monitoring.</li>
-                <li><strong>Gentle Sensory UI:</strong> High-contrast readable typography, soothing color tones, and zero clutter to prevent anxiety.</li>
-                <li><strong>Leadership:</strong> Directed project scope, team coordination, and system integration within SIH guidelines.</li>
-              </ul>
-            </div>
-
-            <!-- Interactive Demo 1: Cognitive Memory Game Simulation -->
-            <div class="interactive-demo-box">
-              <div class="demo-header">
-                <div class="demo-title">
-                  <span class="demo-badge">Live Interactive Preview</span>
-                  <strong>Cognitive Memory Match Mini-Game</strong>
-                </div>
-                <button id="reset-memory-game" class="btn btn-sm btn-secondary">Reset Game</button>
-              </div>
-              <p class="demo-sub">Click two cards to find matching cognitive pairs (designed for gentle recall):</p>
-              
-              <div class="memory-game-grid" id="memory-game-grid">
-                <!-- Dynamically generated or seeded cards -->
-              </div>
-              <div id="memory-game-status" class="demo-status-text">Matches Found: <span id="match-count">0</span> / 4</div>
-            </div>
-
-            <div class="project-tech-tags">
-              <span class="tech-tag">Healthcare Tech</span>
-              <span class="tech-tag">Interactive Games</span>
-              <span class="tech-tag">Cognitive Therapy</span>
-              <span class="tech-tag">Team Leader (SIH)</span>
-            </div>
-          </article>
-
-          <!-- FEATURE 2: 2D to 3D House Model Converter (24h Overnight Hackathon) -->
-          <article class="project-card highlight-card">
-            <div class="card-badge-row">
-              <span class="project-pill hack-pill">Overnight 24-Hour Hackathon</span>
-              <span class="project-pill role-pill">👑 Team Leader (Built 2 Websites)</span>
-            </div>
-
-            <div class="project-header">
-              <div class="project-icon-box">🏠</div>
-              <div>
-                <h3 class="project-name">2D Blueprint to Interactive 3D House Converter</h3>
-                <p class="project-tagline">Spatial Web, Real-Time 3D Rendering & Architectural Features</p>
-              </div>
-            </div>
-
-            <p class="project-description">
-              In an intensive 24-hour overnight hackathon, I served as <strong>Team Leader</strong> where our team built and shipped <strong>two complete websites</strong>. Our flagship platform converts flat 2D house blueprints and sketches into dynamic, interactive 3D house models with custom room textures, lighting adjustments, and spatial inspection.
-            </p>
-
-            <div class="project-key-features">
-              <h4>Key Highlights & Features:</h4>
-              <ul class="feature-checklist">
-                <li><strong>2D to 3D Transformation:</strong> Translates 2D floor plans into interactive 3D spatial models.</li>
-                <li><strong>Interactive Controls:</strong> Rotate angles, toggle room layers (Living Room, Bedroom, Kitchen), and zoom.</li>
-                <li><strong>Rich Customization:</strong> Lighting controls, material styles, and dimensions view.</li>
-                <li><strong>High-Velocity Delivery:</strong> Successfully managed sprints to build 2 full websites within 24 non-stop hours.</li>
-              </ul>
-            </div>
-
-            <!-- Interactive Demo 2: 2D vs 3D House Visualizer -->
-            <div class="interactive-demo-box">
-              <div class="demo-header">
-                <div class="demo-title">
-                  <span class="demo-badge">Interactive Viewer</span>
-                  <strong>Blueprint Model Visualizer</strong>
-                </div>
-                <div class="demo-btn-group">
-                  <button id="view-2d-btn" class="btn btn-sm btn-secondary active">2D Blueprint</button>
-                  <button id="view-3d-btn" class="btn btn-sm btn-primary">3D Isometric</button>
-                </div>
-              </div>
-
-              <!-- Canvas/SVG Container for 2D vs 3D representation -->
-              <div class="blueprint-canvas-container" id="blueprint-canvas-box">
-                <!-- 2D View -->
-                <div id="blueprint-2d" class="blueprint-view active-view">
-                  <div class="blueprint-svg-wrapper">
-                    <svg viewBox="0 0 400 240" class="blueprint-svg">
-                      <!-- Grid lines -->
-                      <defs>
-                        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-opacity="0.08" stroke-width="1"/>
-                        </pattern>
-                      </defs>
-                      <rect width="400" height="240" fill="url(#grid)" />
-                      <!-- Exterior Walls -->
-                      <rect x="30" y="25" width="340" height="190" fill="none" stroke="#6366f1" stroke-width="4" rx="4" />
-                      <!-- Interior Partitions -->
-                      <line x1="210" y1="25" x2="210" y2="215" stroke="#6366f1" stroke-width="3" />
-                      <line x1="30" y1="125" x2="210" y2="125" stroke="#6366f1" stroke-width="3" />
-                      <!-- Room Labels & Dimensions -->
-                      <text x="120" y="75" fill="currentColor" font-size="12" font-weight="600" text-anchor="middle">Living Room (5m x 4m)</text>
-                      <text x="120" y="170" fill="currentColor" font-size="12" font-weight="600" text-anchor="middle">Kitchen & Dining (5m x 3.5m)</text>
-                      <text x="290" y="125" fill="currentColor" font-size="12" font-weight="600" text-anchor="middle">Master Bedroom (6m x 7m)</text>
-                      <!-- Door arcs -->
-                      <path d="M 30 80 A 25 25 0 0 1 55 105" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="2,2"/>
-                      <path d="M 210 70 A 25 25 0 0 1 235 95" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="2,2"/>
-                    </svg>
+              <div class="amber-education-grid">
+                <div class="amber-edu-card border border-separator">
+                  <div class="flex-row-between mb-3">
+                    <span class="pill-badge accent-badge">Current &bull; 1st Year</span>
+                    <span class="text-label">Hyderabad, Telangana</span>
                   </div>
-                  <span class="view-caption">2D Architectural Floorplan with dimensions & partitions</span>
-                </div>
-
-                <!-- 3D Isometric View -->
-                <div id="blueprint-3d" class="blueprint-view" style="display: none;">
-                  <div class="iso-house-visual">
-                    <div class="iso-cube-scene">
-                      <div class="iso-roof">Roof & Lighting Active</div>
-                      <div class="iso-room-box room-living">
-                        <span class="room-title">🛋️ Living Space (Rendered)</span>
-                        <span class="room-stats">Walls: Ambient Occlusion &bull; Height: 3.2m</span>
-                      </div>
-                      <div class="iso-room-box room-bed">
-                        <span class="room-title">🛏️ Master Suite (Rendered)</span>
-                        <span class="room-stats">Windows: Dual Glass &bull; Sunlight Vector: 45°</span>
-                      </div>
-                      <div class="iso-room-box room-kitchen">
-                        <span class="room-title">🍳 Kitchen & Dining</span>
-                        <span class="room-stats">Tiled Surfaces &bull; Spatial Audio node</span>
-                      </div>
-                    </div>
-                  </div>
-                  <span class="view-caption">Converted 3D Interactive Spatial Wireframe & Volumes</span>
-                </div>
-              </div>
-
-              <!-- Feature toggles -->
-              <div class="house-feature-pills">
-                <span class="feature-chip active-chip" id="chip-lighting">💡 Realtime Lighting: ON</span>
-                <span class="feature-chip" id="chip-textures">🎨 Material Textures: Modern</span>
-                <span class="feature-chip" id="chip-camera">🎥 Camera: 45° Isometric</span>
-              </div>
-            </div>
-
-            <div class="project-tech-tags">
-              <span class="tech-tag">3D Web Modeling</span>
-              <span class="tech-tag">24h Overnight Hackathon</span>
-              <span class="tech-tag">2 Websites Shipped</span>
-              <span class="tech-tag">Team Leader</span>
-            </div>
-          </article>
-
-          <!-- FEATURE 3: Working Weather Forecast AI Agent -->
-          <article class="project-card highlight-card">
-            <div class="card-badge-row">
-              <span class="project-pill ai-pill">Artificial Intelligence</span>
-              <span class="project-pill status-pill-done">🟢 Live & Functioning</span>
-            </div>
-
-            <div class="project-header">
-              <div class="project-icon-box">⛅</div>
-              <div>
-                <h3 class="project-name">Autonomous Weather Forecast AI Agent</h3>
-                <p class="project-tagline">Real-Time Meteorological Reasoning, Multi-Parameter Analysis & Advisories</p>
-              </div>
-            </div>
-
-            <p class="project-description">
-              Recently built and verified an intelligent AI agent engineered to deliver reliable weather forecasting. The agent autonomously synthesizes temperature, atmospheric humidity, wind velocities, and precipitation probability to produce conversational, context-aware meteorological advice.
-            </p>
-
-            <div class="project-key-features">
-              <h4>Key Highlights & Features:</h4>
-              <ul class="feature-checklist">
-                <li><strong>Verified & Working:</strong> Built, tested, and actively functioning with zero hallucinated weather metrics.</li>
-                <li><strong>Context-Aware Suggestions:</strong> Provides actionable daily guidance (clothing, umbrellas, travel warnings).</li>
-                <li><strong>Multi-Parameter Parsing:</strong> Real-time temperature, wind speed, UV index, and chance of precipitation.</li>
-                <li><strong>Clean Architecture:</strong> Autonomous tool-use and structured response generation.</li>
-              </ul>
-            </div>
-
-            <!-- Interactive Demo 3: Live AI Agent Chat / Query Simulator -->
-            <div class="interactive-demo-box">
-              <div class="demo-header">
-                <div class="demo-title">
-                  <span class="demo-badge">Live Interactive Simulator</span>
-                  <strong>Test Tushti's Weather Forecast AI Agent</strong>
-                </div>
-                <span class="agent-pulse-status">● Agent Ready</span>
-              </div>
-              <p class="demo-sub">Select a quick prompt or type any city to see the AI agent's live meteorological analysis:</p>
-
-              <!-- Quick query prompts -->
-              <div class="prompt-pills">
-                <button class="prompt-btn" data-city="Hyderabad">📍 Hyderabad (NST Campus)</button>
-                <button class="prompt-btn" data-city="Indore">📍 Indore (Hometown)</button>
-                <button class="prompt-btn" data-city="Bengaluru">📍 Bengaluru</button>
-                <button class="prompt-btn" data-city="Delhi">📍 New Delhi</button>
-              </div>
-
-              <!-- Agent Query Box -->
-              <div class="agent-input-row">
-                <input type="text" id="weather-city-input" placeholder="Enter city name (e.g. Mumbai, Tokyo, London)..." class="agent-input">
-                <button id="run-weather-btn" class="btn btn-primary btn-sm">Ask AI Agent</button>
-              </div>
-
-              <!-- Agent Live Output Display -->
-              <div class="agent-output-card" id="agent-output-card">
-                <div class="agent-output-header">
-                  <span class="agent-avatar">🤖</span>
-                  <div>
-                    <strong>Weather Forecast Agent Response:</strong>
-                    <span class="agent-timestamp" id="agent-time">Real-time Verified</span>
+                  <h4 class="font-display text-xl font-semibold uppercase mb-1">Newton School of Technology (NST)</h4>
+                  <p class="degree-highlight uppercase mb-3">B.Tech in Computer Science &amp; AI (2024 &mdash; Present)
+                  </p>
+                  <p class="details-desc">
+                    Studying computer science fundamentals, data structures, full-stack systems, and artificial
+                    intelligence. Active competitor in national hackathons (Smart India Hackathon and Hacktoberfest
+                    Synqron), leading multi-engineer teams and building production web applications.
+                  </p>
+                  <div class="badges-row">
+                    <span class="pill-badge">First Year</span>
+                    <span class="pill-badge">2x Hackathon Lead</span>
+                    <span class="pill-badge">AI &amp; Web Systems</span>
                   </div>
                 </div>
-                <div class="agent-output-body" id="agent-response-text">
-                  <strong>Hyderabad (Newton School of Technology):</strong> Currently 28°C with pleasant skies. Humidity is at 48% with light westerly winds at 12 km/h. Rain probability is low (<5%). <br>
-                  <em>Advisory: Great weather for outdoor study and campus hackathon sessions!</em>
+
+                <div class="amber-edu-card border border-separator">
+                  <div class="flex-row-between mb-3">
+                    <span class="pill-badge">Schooling Completed</span>
+                    <span class="text-label">Indore, Madhya Pradesh</span>
+                  </div>
+                  <h4 class="font-display text-xl font-semibold uppercase mb-1">Sri Sri Ravishankar Vidhya Mandir
+                    (SSRVM)</h4>
+                  <p class="degree-highlight uppercase mb-3">Secondary &amp; Senior Secondary Schooling</p>
+                  <p class="details-desc">
+                    Completed comprehensive schooling with strong academic performance in mathematics, physical
+                    sciences, and logical reasoning. Developed early discipline in problem solving, leadership, and
+                    ethical community contribution.
+                  </p>
+                  <div class="badges-row">
+                    <span class="pill-badge">Indore Alum</span>
+                    <span class="pill-badge">Madhya Pradesh</span>
+                    <span class="pill-badge">STEM Foundations</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="project-tech-tags">
-              <span class="tech-tag">Autonomous AI Agent</span>
-              <span class="tech-tag">Weather Intelligence</span>
-              <span class="tech-tag">Prompt Architecture</span>
-              <span class="tech-tag">Tested & Verified</span>
-            </div>
-          </article>
+            <!-- SLIDE 2: Personal Data -->
+            <div class="slide-pane-item" id="pane-data">
+              <p class="text-label mb-2">Verified Specifications</p>
+              <h3 class="font-display slide-title mb-6">Personal Data &amp; Credentials</h3>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- Hackathon Track Record Section -->
-    <section class="section hackathon-section" id="hackathons">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Track Record</span>
-          <h2 class="section-title">Hackathon Experience (1st Year)</h2>
-          <p class="section-desc">Completed 3 competitive hackathons in my first year of college, taking leadership in two.</p>
-        </div>
-
-        <div class="hackathon-cards-grid">
-          <!-- Hackathon 1 -->
-          <div class="hack-summary-card">
-            <div class="hack-card-top">
-              <span class="hack-num">01</span>
-              <span class="hack-tag">Smart India Hackathon</span>
-            </div>
-            <h3 class="hack-title">Dementia Care & Gaming App</h3>
-            <p class="hack-desc">
-              Served as <strong>Team Leader</strong>. Guided our multidisciplinary team to build a compassionate healthcare platform featuring cognitive games and caregiver daily assistance tools.
-            </p>
-            <div class="hack-meta">
-              <span><strong>Role:</strong> Team Leader</span>
-              <span><strong>Outcome:</strong> Full Healthcare Web Platform</span>
+              <div class="amber-specs-table border border-separator">
+                <div class="spec-row-item border-b border-separator">
+                  <span class="text-label spec-col-label">Full Name</span>
+                  <span class="spec-col-val font-display text-lg uppercase font-semibold">Tushti Rayak</span>
+                </div>
+                <div class="spec-row-item border-b border-separator">
+                  <span class="text-label spec-col-label">Age</span>
+                  <span class="spec-col-val font-display text-lg uppercase font-semibold">18 Years Old</span>
+                </div>
+                <div class="spec-row-item border-b border-separator">
+                  <span class="text-label spec-col-label">Current College</span>
+                  <span class="spec-col-val">Newton School of Technology, Hyderabad (1st Year)</span>
+                </div>
+                <div class="spec-row-item border-b border-separator">
+                  <span class="text-label spec-col-label">Hometown &amp; Schooling</span>
+                  <span class="spec-col-val">Indore, Madhya Pradesh &bull; Sri Sri Ravishankar Vidhya Mandir
+                    (SSRVM)</span>
+                </div>
+                <div class="spec-row-item border-b border-separator">
+                  <span class="text-label spec-col-label">Hackathon Record</span>
+                  <span class="spec-col-val">3 Hackathons Completed &bull; 2x Team Leader &bull; 100% Verified AI
+                    Agent</span>
+                </div>
+                <div class="spec-row-item border-b border-separator">
+                  <span class="text-label spec-col-label">GitHub</span>
+                  <span class="spec-col-val">
+                    <a href="https://github.com/rayaktushti-tech" target="_blank" rel="noopener noreferrer"
+                      class="hover-highlight text-accent">
+                      github.com/rayaktushti-tech &nearr;
+                    </a>
+                  </span>
+                </div>
+                <div class="spec-row-item">
+                  <span class="text-label spec-col-label">Focus Areas</span>
+                  <span class="spec-col-val">Google Gemma 4 AI, Web Crypto API (AES-256), 3D Web Visualization,
+                    Autonomous AI Agents</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Hackathon 2 -->
-          <div class="hack-summary-card">
-            <div class="hack-card-top">
-              <span class="hack-num">02</span>
-              <span class="hack-tag">Overnight 24h Hackathon</span>
-            </div>
-            <h3 class="hack-title">2D to 3D House Converter + 2nd Website</h3>
-            <p class="hack-desc">
-              Served as <strong>Team Leader</strong>. Orchestrated non-stop overnight sprint development, delivering <strong>two websites</strong> within 24 hours, including our 3D spatial house converter.
-            </p>
-            <div class="hack-meta">
-              <span><strong>Role:</strong> Team Leader</span>
-              <span><strong>Outcome:</strong> 2 Deployed Websites</span>
-            </div>
-          </div>
-
-          <!-- Hackathon 3 -->
-          <div class="hack-summary-card">
-            <div class="hack-card-top">
-              <span class="hack-num">03</span>
-              <span class="hack-tag">1st Year Collegiate Hackathon</span>
-            </div>
-            <h3 class="hack-title">Rapid Prototyping Web Sprint</h3>
-            <p class="hack-desc">
-              Collaborated with NST peers to conceptualize and ship a responsive web application under strict time limits, building mastery in agile problem solving.
-            </p>
-            <div class="hack-meta">
-              <span><strong>Role:</strong> Core Web Developer</span>
-              <span><strong>Outcome:</strong> Responsive Web Portal</span>
-            </div>
+          <!-- Bottom Slide Dots -->
+          <div class="slide-dots-row">
+            <span class="slide-dot-pill active" data-index="0"></span>
+            <span class="slide-dot-pill" data-index="1"></span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Skills & Capabilities Section -->
-    <section class="section skills-section" id="skills">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Toolkit</span>
-          <h2 class="section-title">Technical Skills & Strengths</h2>
-          <p class="section-desc">Skills, tools, and methodologies I leverage across engineering projects.</p>
-        </div>
+        <!-- Technical Skills Badges Below Slide -->
+        <div class="viewfinder-mini skills-viewfinder mt-8">
+          <span class="corner-bracket top-left"></span>
+          <span class="corner-bracket top-right"></span>
+          <span class="corner-bracket bottom-left"></span>
+          <span class="corner-bracket bottom-right"></span>
 
-        <div class="skills-grid">
-          <div class="skill-category">
-            <div class="skill-cat-header">
-              <span class="skill-cat-icon">💻</span>
-              <h3>Web Engineering</h3>
-            </div>
-            <div class="skill-chips">
-              <span class="chip">HTML5 & Semantic Structure</span>
-              <span class="chip">CSS3 & Responsive Layouts</span>
-              <span class="chip">JavaScript Foundations</span>
-              <span class="chip">3D Web Visualization</span>
-              <span class="chip">Component Architecture</span>
-              <span class="chip">Clean Code Principles</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-header">
-              <span class="skill-cat-icon">🤖</span>
-              <h3>AI & Intelligent Agents</h3>
-            </div>
-            <div class="skill-chips">
-              <span class="chip">AI Agent Workflows</span>
-              <span class="chip">Weather Forecasting Systems</span>
-              <span class="chip">Prompt Engineering</span>
-              <span class="chip">API Data Parsing</span>
-              <span class="chip">Context-Aware Reasoning</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-header">
-              <span class="skill-cat-icon">⚡</span>
-              <h3>Leadership & Delivery</h3>
-            </div>
-            <div class="skill-chips">
-              <span class="chip">Team Leader (2x)</span>
-              <span class="chip">Smart India Hackathon</span>
-              <span class="chip">Overnight 24h Sprinting</span>
-              <span class="chip">Rapid MVP Prototyping</span>
-              <span class="chip">Project Presentation</span>
-            </div>
+          <p class="text-label mb-3">Core Technical Skills</p>
+          <div class="skills-tags-cluster">
+            <span class="pill-badge">HTML5 / Modern Web</span>
+            <span class="pill-badge">CSS3 Architecture</span>
+            <span class="pill-badge">JavaScript (ES6+)</span>
+            <span class="pill-badge">Google Gemma 4 AI</span>
+            <span class="pill-badge">Web Crypto API (AES-256)</span>
+            <span class="pill-badge">3D Web / Canvas</span>
+            <span class="pill-badge">AI Agent Workflows</span>
+            <span class="pill-badge">Sprint Team Leadership</span>
+            <span class="pill-badge">Git &amp; GitHub</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Connect Section -->
-    <section class="section contact-section" id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <div class="contact-header">
-            <span class="section-subtitle">Get In Touch</span>
-            <h2 class="section-title">Let's Connect & Collaborate</h2>
-            <p class="section-desc">
-              Looking for a hackathon teammate, AI enthusiast, or web developer? Feel free to reach out!
-            </p>
-          </div>
+    <!-- Contact Section (Amber's Bold Call-To-Action Style) -->
+    <section class="section-contact" id="contact">
+      <div class="container-wide contact-inner">
+        <p class="text-label mb-4">Let's work together</p>
+        <h2 class="font-display contact-big-title">
+          Let's Build Something<span class="text-accent">.</span>
+        </h2>
+        <p class="contact-lead">
+          Looking for a hackathon teammate, AI developer, or web engineer? Reach out anytime.
+        </p>
 
-          <div class="contact-grid">
-            <div class="contact-card">
-              <div class="contact-icon">📍</div>
-              <h4>Current Location</h4>
-              <p>Newton School of Technology, Hyderabad, Telangana</p>
-            </div>
+        <div class="contact-actions-grid">
+          <a href="mailto:tushtirayak@example.com" class="contact-card hover-highlight-card">
+            <span class="text-label">Email Direct</span>
+            <span class="contact-card-val">tushtirayak@example.com</span>
+            <span class="contact-arrow">&nearr;</span>
+          </a>
 
-            <div class="contact-card">
-              <div class="contact-icon">🏫</div>
-              <h4>Hometown</h4>
-              <p>Indore, Madhya Pradesh (SSRVM Alum)</p>
-            </div>
+          <a href="https://github.com/rayaktushti-tech" target="_blank" rel="noopener noreferrer"
+            class="contact-card hover-highlight-card">
+            <span class="text-label">GitHub Profile</span>
+            <span class="contact-card-val">rayaktushti-tech</span>
+            <span class="contact-arrow">&nearr;</span>
+          </a>
 
-            <div class="contact-card">
-              <div class="contact-icon">⚡</div>
-              <h4>Status</h4>
-              <p>Open for Hackathons, AI Projects & Collabs</p>
-            </div>
-          </div>
-
-          <!-- Interactive Contact Actions -->
-          <div class="contact-actions-bar">
-            <button id="copy-email-btn" class="btn btn-primary">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-              <span id="copy-text">Copy Contact Email</span>
-            </button>
-            <a href="mailto:tushtirayak@example.com" class="btn btn-secondary">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <span>Send Direct Email</span>
-            </a>
-          </div>
-          <p id="copy-notification" class="copy-notification">Email copied to clipboard: tushtirayak@example.com</p>
+          <button type="button" id="copy-email-btn" class="contact-card hover-highlight-card btn-copy-card">
+            <span class="text-label">One-Click Copy</span>
+            <span class="contact-card-val" id="copy-status-text">Copy Email to Clipboard</span>
+            <span class="contact-arrow">&bull;</span>
+          </button>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Minimal Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <strong>Tushti Rayak</strong> &bull; 18-Year-Old Technologist &bull; Newton School of Technology, Hyderabad
-      </div>
-      <div class="footer-right">
-        <span>Antigravity Project 1 &bull; 2024–2026</span>
+  <!-- Footer (Amber's Minimalist 10px Tracking Bar) -->
+  <footer class="site-footer border-t border-separator">
+    <div class="container-wide footer-inner">
+      <p class="footer-copy text-label">
+        &copy; 2026 Tushti Rayak &bull; Newton School of Technology, Hyderabad
+      </p>
+
+      <div class="footer-links">
+        <a href="https://github.com/rayaktushti-tech" target="_blank" rel="noopener noreferrer"
+          class="hover-highlight text-label">GitHub</a>
+        <a href="mailto:tushtirayak@example.com" class="hover-highlight text-label">Email</a>
+        <a href="#hero" class="hover-highlight text-label">Back to Top &uarr;</a>
       </div>
     </div>
   </footer>
 
-  <!-- Interactive JavaScript Functionality (Inside HTML file so exactly 2 files exist) -->
+  <!-- Interactive Script: Theme Toggle, AI Simulator, Copy Email, and Slider -->
   <script>
-    // 1. Dark/Light Theme Switcher
+    // 1. Theme Management (Dark / Light)
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
-    const savedTheme = localStorage.getItem('tr_portfolio_theme') || 'dark';
-    body.setAttribute('data-theme', savedTheme);
+    const rootEl = document.documentElement;
+
+    const savedTheme = localStorage.getItem('amber_theme') || 'dark';
+    rootEl.className = savedTheme;
 
     themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('tr_portfolio_theme', newTheme);
+      const isDark = rootEl.classList.contains('dark');
+      const nextTheme = isDark ? 'light' : 'dark';
+      rootEl.className = nextTheme;
+      localStorage.setItem('amber_theme', nextTheme);
     });
 
-    // 2. Email Copy Button
-    const copyBtn = document.getElementById('copy-email-btn');
-    const copyText = document.getElementById('copy-text');
-    const notification = document.getElementById('copy-notification');
-    const emailToCopy = "tushtirayak@example.com";
+    // 2. Weather AI Agent Simulator
+    const simInput = document.getElementById('sim-city-input');
+    const simBtn = document.getElementById('sim-submit-btn');
+    const simScreen = document.getElementById('sim-terminal-screen');
+    const presets = document.querySelectorAll('.preset-pill');
 
-    copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(emailToCopy).then(() => {
-        copyText.textContent = "Copied!";
-        notification.classList.add('show');
-        setTimeout(() => {
-          copyText.textContent = "Copy Contact Email";
-          notification.classList.remove('show');
-        }, 2500);
-      }).catch(() => {
-        copyText.textContent = emailToCopy;
-      });
-    });
-
-    // 3. Demo 1: Cognitive Memory Matching Game
-    const memoryGrid = document.getElementById('memory-game-grid');
-    const matchCountDisplay = document.getElementById('match-count');
-    const resetGameBtn = document.getElementById('reset-memory-game');
-
-    const cardSymbols = ['🧠', '🌸', '⭐', '🎈'];
-    let cards = [...cardSymbols, ...cardSymbols];
-    let flippedCards = [];
-    let matchedPairs = 0;
-    let lockBoard = false;
-
-    function initMemoryGame() {
-      memoryGrid.innerHTML = '';
-      flippedCards = [];
-      matchedPairs = 0;
-      lockBoard = false;
-      matchCountDisplay.textContent = '0';
-      
-      // Shuffle cards
-      cards.sort(() => Math.random() - 0.5);
-
-      cards.forEach((symbol, index) => {
-        const card = document.createElement('div');
-        card.classList.add('memory-card');
-        card.dataset.symbol = symbol;
-        card.dataset.index = index;
-        card.innerHTML = `
-          <div class="card-inner">
-            <div class="card-front">?</div>
-            <div class="card-back">${symbol}</div>
-          </div>
-        `;
-        card.addEventListener('click', flipCard);
-        memoryGrid.appendChild(card);
-      });
-    }
-
-    function flipCard() {
-      if (lockBoard) return;
-      if (this === flippedCards[0]) return;
-      if (this.classList.contains('matched')) return;
-
-      this.classList.add('flipped');
-
-      if (flippedCards.length === 0) {
-        flippedCards.push(this);
-      } else {
-        flippedCards.push(this);
-        checkMatch();
-      }
-    }
-
-    function checkMatch() {
-      const [card1, card2] = flippedCards;
-      const isMatch = card1.dataset.symbol === card2.dataset.symbol;
-
-      if (isMatch) {
-        card1.classList.add('matched');
-        card2.classList.add('matched');
-        matchedPairs++;
-        matchCountDisplay.textContent = matchedPairs;
-        flippedCards = [];
-
-        if (matchedPairs === 4) {
-          setTimeout(() => {
-            alert('🎉 Congratulations! Memory recall puzzle completed! Cognitive stimulation exercises like this are key to dementia care.');
-          }, 300);
-        }
-      } else {
-        lockBoard = true;
-        setTimeout(() => {
-          card1.classList.remove('flipped');
-          card2.classList.remove('flipped');
-          flippedCards = [];
-          lockBoard = false;
-        }, 900);
-      }
-    }
-
-    resetGameBtn.addEventListener('click', initMemoryGame);
-    initMemoryGame();
-
-    // 4. Demo 2: 2D vs 3D House Model Visualizer Switcher
-    const view2dBtn = document.getElementById('view-2d-btn');
-    const view3dBtn = document.getElementById('view-3d-btn');
-    const view2d = document.getElementById('blueprint-2d');
-    const view3d = document.getElementById('blueprint-3d');
-
-    view2dBtn.addEventListener('click', () => {
-      view2dBtn.classList.add('active', 'btn-secondary');
-      view2dBtn.classList.remove('btn-outline');
-      view3dBtn.classList.remove('active', 'btn-primary');
-      view3dBtn.classList.add('btn-secondary');
-      view2d.style.display = 'block';
-      view3d.style.display = 'none';
-    });
-
-    view3dBtn.addEventListener('click', () => {
-      view3dBtn.classList.add('active', 'btn-primary');
-      view3dBtn.classList.remove('btn-secondary');
-      view2dBtn.classList.remove('active', 'btn-primary');
-      view2dBtn.classList.add('btn-secondary');
-      view2d.style.display = 'none';
-      view3d.style.display = 'block';
-    });
-
-    // 5. Demo 3: Weather Forecast AI Agent Simulator
-    const cityInput = document.getElementById('weather-city-input');
-    const runWeatherBtn = document.getElementById('run-weather-btn');
-    const responseBox = document.getElementById('agent-response-text');
-    const promptButtons = document.querySelectorAll('.prompt-btn');
-
-    const weatherDatabase = {
+    const weatherData = {
       'hyderabad': {
         temp: '28°C',
-        sky: 'Partly Cloudy',
-        humidity: '48%',
-        wind: '12 km/h W',
-        rainChance: '5%',
-        advisory: 'Optimal weather for hackathon project presentations at NST Campus. Comfortable humidity.'
+        conditions: 'Partly Sunny / Pleasant',
+        humidity: '46%',
+        wind: '11 km/h WSW',
+        rain: '< 5%',
+        advisory: 'Optimal weather across NST Hyderabad campus. Mild westerly breeze; excellent conditions for hackathons.'
       },
       'indore': {
         temp: '24°C',
-        sky: 'Clear Skies & Sunny',
+        conditions: 'Clear Skies & Sunny',
         humidity: '38%',
-        wind: '8 km/h NW',
-        rainChance: '0%',
-        advisory: 'Pleasant and crisp in Indore! Ideal conditions with zero precipitation expected today.'
+        wind: '9 km/h NW',
+        rain: '0%',
+        advisory: 'Crisp, pleasant atmosphere in Indore. Zero precipitation likelihood throughout the evening.'
       },
       'bengaluru': {
         temp: '22°C',
-        sky: 'Scattered Clouds & Breezy',
-        humidity: '62%',
-        wind: '18 km/h E',
-        rainChance: '25%',
-        advisory: 'Pleasantly cool tech-capital breeze. Light sweater recommended for late evenings.'
+        conditions: 'Scattered Cloud Cover',
+        humidity: '64%',
+        wind: '16 km/h E',
+        rain: '20%',
+        advisory: 'Breezy and pleasantly cool in the tech hub. Light layering recommended.'
       },
       'delhi': {
         temp: '26°C',
-        sky: 'Hazy Sun',
+        conditions: 'Hazy Afternoon Sunshine',
         humidity: '42%',
         wind: '10 km/h NE',
-        rainChance: '2%',
-        advisory: 'Warm afternoon ahead with mild night cooling. Keep hydrated.'
+        rain: '0%',
+        advisory: 'Moderate daytime warmth with steady atmospheric pressure.'
       }
     };
 
-    function simulateWeatherAgent(cityName) {
-      if (!cityName) return;
-      const key = cityName.toLowerCase().trim();
-      responseBox.innerHTML = `<em>🤖 AI Agent reasoning: Fetching multi-source atmospheric data for "${cityName}"...</em>`;
+    function runSimulation(city) {
+      if (!city) return;
+      const key = city.toLowerCase().trim();
+
+      simScreen.innerHTML = `
+        <div class="terminal-line"><span class="t-prompt">&gt;</span> Querying telemetry for: <strong>${city}</strong></div>
+        <div class="terminal-line"><span class="t-prompt">&gt;</span> Parsing barometric pressure, wind vectors, and humidity models...</div>
+      `;
 
       setTimeout(() => {
-        const data = weatherDatabase[key] || {
+        const item = weatherData[key] || {
           temp: '25°C',
-          sky: 'Mostly Clear',
+          conditions: 'Stable & Clear',
           humidity: '50%',
-          wind: '11 km/h',
-          rainChance: '10%',
-          advisory: `AI Agent verified: Stable atmospheric parameters across ${cityName}. Favorable conditions throughout the day.`
+          wind: '12 km/h',
+          rain: '10%',
+          advisory: `AI Agent verified: Stable atmospheric parameters across ${city}. Seasonal range within normal variance.`
         };
 
-        responseBox.innerHTML = `
-          <strong>${cityName.toUpperCase()} Weather Analysis:</strong><br>
-          🌡️ <strong>Temperature:</strong> ${data.temp} &bull; ☁️ <strong>Condition:</strong> ${data.sky}<br>
-          💧 <strong>Humidity:</strong> ${data.humidity} &bull; 💨 <strong>Wind:</strong> ${data.wind} &bull; ☔ <strong>Rain Chance:</strong> ${data.rainChance}<br>
-          💡 <strong>AI Agent Advisory:</strong> ${data.advisory}
+        simScreen.innerHTML = `
+          <div class="terminal-line"><span class="t-success">&check; Telemetry verified</span> &bull; <strong>${city.toUpperCase()}</strong></div>
+          <div class="telemetry-grid">
+            <div class="telemetry-cell"><span class="text-label">TEMP</span><span class="telemetry-val">${item.temp}</span></div>
+            <div class="telemetry-cell"><span class="text-label">SKY</span><span class="telemetry-val">${item.conditions}</span></div>
+            <div class="telemetry-cell"><span class="text-label">HUMIDITY</span><span class="telemetry-val">${item.humidity}</span></div>
+            <div class="telemetry-cell"><span class="text-label">WIND</span><span class="telemetry-val">${item.wind}</span></div>
+            <div class="telemetry-cell"><span class="text-label">RAIN PROB</span><span class="telemetry-val">${item.rain}</span></div>
+          </div>
+          <div class="terminal-line"><span class="t-prompt">&gt;</span> <strong>AI Advisory:</strong> ${item.advisory}</div>
         `;
-      }, 450);
+      }, 350);
     }
 
-    runWeatherBtn.addEventListener('click', () => {
-      const city = cityInput.value || 'Hyderabad';
-      simulateWeatherAgent(city);
+    simBtn.addEventListener('click', () => {
+      runSimulation(simInput.value.trim() || 'Hyderabad');
     });
 
-    cityInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        const city = cityInput.value || 'Hyderabad';
-        simulateWeatherAgent(city);
+    simInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') runSimulation(simInput.value.trim() || 'Hyderabad');
+    });
+
+    presets.forEach(p => {
+      p.addEventListener('click', () => {
+        simInput.value = p.dataset.city;
+        runSimulation(p.dataset.city);
+      });
+    });
+
+    // 3. One-Click Copy Email
+    const copyBtn = document.getElementById('copy-email-btn');
+    const copyStatus = document.getElementById('copy-status-text');
+    const emailToCopy = 'tushtirayak@example.com';
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(emailToCopy).then(() => {
+        copyStatus.textContent = 'Copied to Clipboard!';
+        setTimeout(() => {
+          copyStatus.textContent = 'Copy Email to Clipboard';
+        }, 2200);
+      }).catch(() => {
+        copyStatus.textContent = emailToCopy;
+      });
+    });
+
+    // 4. Education & Personal Data Slide Functionality
+    const slideTabBtns = document.querySelectorAll('.slide-tab-btn');
+    const slidePanes = document.querySelectorAll('.slide-pane-item');
+    const slideDots = document.querySelectorAll('.slide-dot-pill');
+    const prevBtn = document.getElementById('slide-arrow-prev');
+    const nextBtn = document.getElementById('slide-arrow-next');
+    const indexNum = document.getElementById('slide-index-num');
+
+    let currentSlide = 0;
+    const totalSlides = slidePanes.length;
+
+    function setSlide(idx) {
+      if (idx < 0) idx = totalSlides - 1;
+      if (idx >= totalSlides) idx = 0;
+      currentSlide = idx;
+
+      slidePanes.forEach((p, i) => {
+        p.classList.toggle('active-pane', i === currentSlide);
+      });
+      slideTabBtns.forEach((b, i) => {
+        b.classList.toggle('active', i === currentSlide);
+      });
+      slideDots.forEach((d, i) => {
+        d.classList.toggle('active', i === currentSlide);
+      });
+      if (indexNum) {
+        indexNum.textContent = '0' + (currentSlide + 1);
       }
-    });
+    }
 
-    promptButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const city = btn.dataset.city;
-        cityInput.value = city;
-        simulateWeatherAgent(city);
-      });
-    });
-
-    // 6. Active nav link highlight on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= (sectionTop - 130)) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
+    if (prevBtn) prevBtn.addEventListener('click', () => setSlide(currentSlide - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => setSlide(currentSlide + 1));
+    slideTabBtns.forEach((b, i) => b.addEventListener('click', () => setSlide(i)));
+    slideDots.forEach((d, i) => d.addEventListener('click', () => setSlide(i)));
   </script>
 </body>
+
 </html>
